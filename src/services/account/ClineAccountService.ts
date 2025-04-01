@@ -34,7 +34,7 @@ export class ClineAccountService {
 		const clineApiKey = await this.getClineApiKey()
 
 		if (!clineApiKey) {
-			throw new Error("Cline API key not found")
+			throw new Error("天熠小码 API key not found")
 		}
 
 		const url = `${this.baseUrl}${endpoint}`

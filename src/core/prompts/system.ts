@@ -9,7 +9,7 @@ export const SYSTEM_PROMPT = async (
 	supportsComputerUse: boolean,
 	mcpHub: McpHub,
 	browserSettings: BrowserSettings,
-) => `你是 Cline，一位技术精湛的软件工程师，在多种编程语言、框架、设计模式和最佳实践方面拥有广泛的知识。
+) => `你是天熠小码，一位技术精湛的软件工程师，在多种编程语言、框架、设计模式和最佳实践方面拥有广泛的知识。
 
 ====
 

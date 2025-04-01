@@ -197,7 +197,7 @@ export const ChatRowContent = ({ message, isExpanded, onToggleExpand, lastModifi
 							color: errorColor,
 							marginBottom: "-1.5px",
 						}}></span>,
-					<span style={{ color: errorColor, fontWeight: "bold" }}>Cline 遇到问题...</span>,
+					<span style={{ color: errorColor, fontWeight: "bold" }}>天熠小码遇到问题...</span>,
 				]
 			case "auto_approval_max_req_reached":
 				return [
@@ -221,7 +221,7 @@ export const ChatRowContent = ({ message, isExpanded, onToggleExpand, lastModifi
 								marginBottom: "-1.5px",
 							}}></span>
 					),
-					<span style={{ color: normalColor, fontWeight: "bold" }}>Cline 想要执行此命令：</span>,
+					<span style={{ color: normalColor, fontWeight: "bold" }}>天熠小码想要执行此命令：</span>,
 				]
 			case "use_mcp_server":
 				const mcpServerUse = JSON.parse(message.text || "{}") as ClineAskUseMcpServer
@@ -237,7 +237,7 @@ export const ChatRowContent = ({ message, isExpanded, onToggleExpand, lastModifi
 							}}></span>
 					),
 					<span style={{ color: normalColor, fontWeight: "bold", wordBreak: "break-word" }}>
-						Cline 想要在{" "}
+						天熠小码想要在{" "}
 						<code style={{ wordBreak: "break-all" }}>
 							{getMcpServerDisplayName(mcpServerUse.serverName, mcpMarketplaceCatalog)}
 						</code>{" "}
@@ -315,7 +315,7 @@ export const ChatRowContent = ({ message, isExpanded, onToggleExpand, lastModifi
 							color: normalColor,
 							marginBottom: "-1.5px",
 						}}></span>,
-					<span style={{ color: normalColor, fontWeight: "bold" }}>Cline 有一个问题：</span>,
+					<span style={{ color: normalColor, fontWeight: "bold" }}>天熠小码有一个问题：</span>,
 				]
 			default:
 				return [null, null]
@@ -359,7 +359,7 @@ export const ChatRowContent = ({ message, isExpanded, onToggleExpand, lastModifi
 					<>
 						<div style={headerStyle}>
 							{toolIcon("edit")}
-							<span style={{ fontWeight: "bold" }}>Cline 想要编辑此文件：</span>
+							<span style={{ fontWeight: "bold" }}>天熠小码想要编辑此文件：</span>
 						</div>
 						<CodeAccordian
 							// isLoading={message.partial}
@@ -375,7 +375,7 @@ export const ChatRowContent = ({ message, isExpanded, onToggleExpand, lastModifi
 					<>
 						<div style={headerStyle}>
 							{toolIcon("new-file")}
-							<span style={{ fontWeight: "bold" }}>Cline 想要创建一个新文件：</span>
+							<span style={{ fontWeight: "bold" }}>天熠小码想要创建一个新文件：</span>
 						</div>
 						<CodeAccordian
 							isLoading={message.partial}
@@ -392,8 +392,8 @@ export const ChatRowContent = ({ message, isExpanded, onToggleExpand, lastModifi
 						<div style={headerStyle}>
 							{toolIcon("file-code")}
 							<span style={{ fontWeight: "bold" }}>
-								{/* {message.type === "ask" ? "" : "Cline 读取了此文件："} */}
-								Cline 想要读取此文件：
+								{/* {message.type === "ask" ? "" : "天熠小码读取了此文件："} */}
+								天熠小码想要读取此文件：
 							</span>
 						</div>
 						<div
@@ -451,8 +451,8 @@ export const ChatRowContent = ({ message, isExpanded, onToggleExpand, lastModifi
 							{toolIcon("folder-opened")}
 							<span style={{ fontWeight: "bold" }}>
 								{message.type === "ask"
-									? "Cline 想要查看此目录中的顶级文件："
-									: "Cline 查看了此目录中的顶级文件："}
+									? "天熠小码想要查看此目录中的顶级文件："
+									: "天熠小码查看了此目录中的顶级文件："}
 							</span>
 						</div>
 						<CodeAccordian
@@ -471,8 +471,8 @@ export const ChatRowContent = ({ message, isExpanded, onToggleExpand, lastModifi
 							{toolIcon("folder-opened")}
 							<span style={{ fontWeight: "bold" }}>
 								{message.type === "ask"
-									? "Cline 想要递归查看此目录中的所有文件："
-									: "Cline 递归查看了此目录中的所有文件："}
+									? "天熠小码想要递归查看此目录中的所有文件："
+									: "天熠小码递归查看了此目录中的所有文件："}
 							</span>
 						</div>
 						<CodeAccordian
@@ -491,8 +491,8 @@ export const ChatRowContent = ({ message, isExpanded, onToggleExpand, lastModifi
 							{toolIcon("file-code")}
 							<span style={{ fontWeight: "bold" }}>
 								{message.type === "ask"
-									? "Cline 想要查看此目录中使用的源代码定义名称："
-									: "Cline 查看了此目录中使用的源代码定义名称："}
+									? "天熠小码想要查看此目录中使用的源代码定义名称："
+									: "天熠小码查看了此目录中使用的源代码定义名称："}
 							</span>
 						</div>
 						<CodeAccordian
@@ -509,7 +509,7 @@ export const ChatRowContent = ({ message, isExpanded, onToggleExpand, lastModifi
 						<div style={headerStyle}>
 							{toolIcon("search")}
 							<span style={{ fontWeight: "bold" }}>
-								Cline 想要在此目录中搜索 <code>{tool.regex}</code>：
+								天熠小码想要在此目录中搜索 <code>{tool.regex}</code>：
 							</span>
 						</div>
 						<CodeAccordian
@@ -975,7 +975,7 @@ export const ChatRowContent = ({ message, isExpanded, onToggleExpand, lastModifi
 									</span>
 								</div>
 								<div>
-									Cline 尝试访问 <code>{message.text}</code>，但被 <code>.clineignore</code> 文件阻止。
+									天熠小码尝试访问 <code>{message.text}</code>，但被 <code>.clineignore</code> 文件阻止。
 								</div>
 							</div>
 						</>
@@ -1062,7 +1062,7 @@ export const ChatRowContent = ({ message, isExpanded, onToggleExpand, lastModifi
 									</span>
 								</div>
 								<div>
-									Cline 将无法查看命令的输出。请更新 VSCode (<code>CMD/CTRL + Shift + P</code> → "Update") 并确保您使用的是受支持的 shell：zsh、bash、fish 或 PowerShell (<code>CMD/CTRL + Shift + P</code> → "Terminal: Select Default Profile")。{" "}
+									天熠小码将无法查看命令的输出。请更新 VSCode (<code>CMD/CTRL + Shift + P</code> → "Update") 并确保您使用的是受支持的 shell：zsh、bash、fish 或 PowerShell (<code>CMD/CTRL + Shift + P</code> → "Terminal: Select Default Profile")。{" "}
 									<a
 										href="https://github.com/cline/cline/wiki/Troubleshooting-%E2%80%90-Shell-Integration-Unavailable"
 										style={{

@@ -381,7 +381,7 @@ export class ClineProvider implements vscode.WebviewViewProvider {
             <link rel="stylesheet" type="text/css" href="${stylesUri}">
             <link href="${codiconsUri}" rel="stylesheet" />
 						<meta http-equiv="Content-Security-Policy" content="default-src 'none'; connect-src https://*.posthog.com https://*.firebaseauth.com https://*.firebaseio.com https://*.googleapis.com https://*.firebase.com; font-src ${webview.cspSource}; style-src ${webview.cspSource} 'unsafe-inline'; img-src ${webview.cspSource} https: data:; script-src 'nonce-${nonce}' 'unsafe-eval';">
-            <title>Cline</title>
+            <title>天熠小码</title>
           </head>
           <body>
             <noscript>您需要启用 JavaScript 才能运行此应用。</noscript>
@@ -407,7 +407,7 @@ export class ClineProvider implements vscode.WebviewViewProvider {
 			await axios.get(`http://${localServerUrl}`);
 		} catch (error) {
 			vscode.window.showErrorMessage(
-				"Cline: 本地 webview 开发服务器未运行，HMR 将无法工作。请在启动扩展之前运行 'npm run dev:webview' 以启用 HMR。使用捆绑的资产。",
+				"天熠小码: 本地 webview 开发服务器未运行，HMR 将无法工作。请在启动扩展之前运行 'npm run dev:webview' 以启用 HMR。使用捆绑的资产。",
 			);
 
 			return this.getHtmlContent(webview);
@@ -540,7 +540,7 @@ export class ClineProvider implements vscode.WebviewViewProvider {
 						// 您可以发送任何 JSON 可序列化的数据。
 						// 这也可以在扩展 .ts 中完成
 						//this.postMessageToWebview({ type: "text", text: `Extension: ${Date.now()}` });
-						// 初始化 Cline 的新实例将确保旧实例中任何正在运行的承诺不会影响我们的新任务。这本质上为新任务创建了一个全新的状态
+						// 初始化 天熠小码 的新实例将确保旧实例中任何正在运行的承诺不会影响我们的新任务。这本质上为新任务创建了一个全新的状态
 						await this.initClineWithTask(message.text, message.images);
 						break;
 					case "apiConfiguration":
@@ -684,7 +684,7 @@ export class ClineProvider implements vscode.WebviewViewProvider {
 							await pWaitFor(() => this.cline?.isInitialized === true, {
 								timeout: 3_000,
 							}).catch(() => {
-								console.error("初始化新 cline 实例失败");
+								console.error("初始化新的天熠小码实例失败");
 							});
 							// 注意：cancelTask 等待 abortTask，abortTask 等待 diffViewProvider.revertChanges，revertChanges 允许我们重置到检查点，而不是在检查点重置的同时或之后调用 revertChanges 函数
 							await this.cline?.restoreCheckpoint(message.number, message.text! as ClineCheckpointRestore);
@@ -1378,7 +1378,7 @@ export class ClineProvider implements vscode.WebviewViewProvider {
 			// vscode.window.showInformationMessage("成功登录到 Cline")
 		} catch (error) {
 			console.error("处理身份验证回调失败:", error)
-			vscode.window.showErrorMessage("登录 Cline 失败")
+			vscode.window.showErrorMessage("登录天熠小码失败")
 			// 即使在登录失败时，我们也保留任何现有的令牌
 			// 仅在明确注销时清除令牌
 		}

@@ -1,29 +1,24 @@
 {
-	"name": "claude-dev",
-	"displayName": "Cline",
+	"name": "ty-xiaoma",
+	"displayName": "天熠小码",
 	"description": "IDE 中的自主编码代理，能够在每一步都获得您的许可的情况下创建/编辑文件、运行命令、使用浏览器等。",
-	"version": "3.8.4",
+	"version": "1.0.0",
 	"icon": "assets/icons/icon.png",
 	"engines": {
 		"vscode": "^1.84.0"
 	},
 	"author": {
-		"name": "Cline Bot Inc."
+		"name": "tianyi"
 	},
 	"license": "Apache-2.0",
-	"publisher": "saoudrizwan",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/cline/cline"
-	},
-	"homepage": "https://cline.bot",
+	"publisher": "tianyi",
 	"categories": [
 		"AI",
-        "Chat",
-        "Programming Languages",
-        "Education",
-        "Snippets",
-        "Testing",
+		"Chat",
+		"Programming Languages",
+		"Education",
+		"Snippets",
+		"Testing",
 		"人工智能",
 		"聊天",
 		"编程语言",
@@ -32,7 +27,6 @@
 		"测试"
 	],
 	"keywords": [
-		"cline",
 		"claude",
 		"dev",
 		"mcp",
@@ -52,7 +46,7 @@
 			"activitybar": [
 				{
 					"id": "claude-dev-ActivityBar",
-					"title": "Cline",
+					"title": "天熠小码",
 					"icon": "assets/icons/icon.svg"
 				}
 			]
@@ -115,17 +109,17 @@
 			},
 			{
 				"command": "cline.addToChat",
-				"title": "添加到 Cline",
+				"title": "添加到天熠小码",
 				"category": "Cline"
 			},
 			{
 				"command": "cline.addTerminalOutputToChat",
-				"title": "添加到 Cline",
+				"title": "添加到天熠小码",
 				"category": "Cline"
 			},
 			{
 				"command": "cline.fixWithCline",
-				"title": "使用 Cline 修复",
+				"title": "使用天熠小码修复",
 				"category": "Cline"
 			}
 		],
@@ -182,7 +176,7 @@
 			]
 		},
 		"configuration": {
-			"title": "Cline",
+			"title": "天熠小码",
 			"properties": {
 				"cline.vsCodeLmModelSelector": {
 					"type": "object",
@@ -261,7 +255,7 @@
 						"Turkish - Türkçe"
 					],
 					"default": "English",
-					"description": "Cline 应用于交流的语言。"
+					"description": "天熠小码应用于交流的语言。"
 				},
 				"cline.mcpMarketplace.enabled": {
 					"type": "boolean",

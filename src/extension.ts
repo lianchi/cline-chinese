@@ -28,7 +28,7 @@ export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(outputChannel)
 
 	Logger.initialize(outputChannel)
-	Logger.log("Cline extension activated")
+	Logger.log("天熠小码扩展已激活")
 
 	const sidebarProvider = new ClineProvider(context, outputChannel)
 
@@ -76,7 +76,7 @@ export function activate(context: vscode.ExtensionContext) {
 		}
 		const targetCol = hasVisibleEditors ? Math.max(lastCol + 1, 1) : vscode.ViewColumn.Two
 
-		const panel = vscode.window.createWebviewPanel(ClineProvider.tabPanelId, "Cline", targetCol, {
+		const panel = vscode.window.createWebviewPanel(ClineProvider.tabPanelId, "天熠小码", targetCol, {
 			enableScripts: true,
 			retainContextWhenHidden: true,
 			localResourceRoots: [context.extensionUri],
@@ -127,7 +127,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 	context.subscriptions.push(
 		vscode.commands.registerCommand("cline.openDocumentation", () => {
-			vscode.env.openExternal(vscode.Uri.parse("https://hybridtalentcomputing.gitbook.io/cline-chinese-doc/"))
+			vscode.env.openExternal(vscode.Uri.parse("http://10.10.10.22/ty-xiaoma-doc/"))
 		}),
 	)
 
@@ -360,7 +360,7 @@ export function activate(context: vscode.ExtensionContext) {
 // This method is called when your extension is deactivated
 export function deactivate() {
 	telemetryService.shutdown()
-	Logger.log("Cline extension deactivated")
+	Logger.log("天熠小码扩展已停用")
 }
 
 // TODO: Find a solution for automatically removing DEV related content from production builds.

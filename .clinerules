@@ -1,8 +1,8 @@
-# Cline Extension Architecture & Development Guide
+# 天熠小码 Extension Architecture & Development Guide
 
 ## Project Overview
 
-Cline is a VSCode extension that provides AI assistance through a combination of a core extension backend and a React-based webview frontend. The extension is built with TypeScript and follows a modular architecture pattern.
+天熠小码 is a VSCode extension that provides AI assistance through a combination of a core extension backend and a React-based webview frontend. The extension is built with TypeScript and follows a modular architecture pattern.
 
 ## Architecture Overview
 

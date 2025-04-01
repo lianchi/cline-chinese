@@ -29,10 +29,3 @@
 -   **有兴趣贡献？** 我们欢迎您分享您的见解：
     -   欢迎提交Pull Request
   
-
-## 额外资源
-
--   **Cline GitHub仓库:** [https://github.com/HybridTalentComputing/cline-chinese](https://github.com/HybridTalentComputing/cline-chinese)
--   **MCP文档:** [https://modelcontextprotocol.org/docs](https://modelcontextprotocol.org/docs)
-
-我们始终致力于改进这份文档。如果您有任何建议或发现可以提升之处，请告诉我们。您的反馈让Cline对每个人更好。

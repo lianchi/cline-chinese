@@ -101,11 +101,11 @@ const McpView = ({ onDone }: McpViewProps) => {
 								<VSCodeLink href="https://github.com/modelcontextprotocol" style={{ display: "inline" }}>
 									模型上下文协议
 								</VSCodeLink>{" "}
-								允许与本地运行的 MCP 服务器通信，这些服务器提供额外的工具和资源来扩展 Cline 的能力。您可以使用{" "}
+								允许与本地运行的 MCP 服务器通信，这些服务器提供额外的工具和资源来扩展天熠小码的能力。您可以使用{" "}
 								<VSCodeLink href="https://github.com/modelcontextprotocol/servers" style={{ display: "inline" }}>
 									社区制作的服务器
 								</VSCodeLink>{" "}
-								或要求 Cline 为您的工作流程创建新工具（例如，“添加一个获取最新 npm 文档的工具”）。{" "}
+								或要求天熠小码为您的工作流程创建新工具（例如，“添加一个获取最新 npm 文档的工具”）。{" "}
 								<VSCodeLink href="https://x.com/sdrzn/status/1867271665086074969" style={{ display: "inline" }}>
 									在此处查看演示。
 								</VSCodeLink>

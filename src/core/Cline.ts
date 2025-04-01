@@ -286,7 +286,7 @@ export class Cline {
 				conversationHistoryDeletedRange: this.conversationHistoryDeletedRange,
 			})
 		} catch (error) {
-			console.error("保存 cline 消息失败:", error)
+			console.error("保存天熠小码消息失败:", error)
 		}
 	}
 
@@ -598,7 +598,7 @@ export class Cline {
 	}> {
 		// 如果此 Cline 实例被提供者中止，那么唯一让我们保持活动的是仍在后台运行的 promise，在这种情况下，我们不想将其结果发送到 webview，因为它现在附加到一个新的 Cline 实例。因此，我们可以安全地忽略任何活动 promise 的结果，并且该类将被释放。（尽管我们在提供者中设置 Cline = undefined，但这只是删除了对此实例的引用，但该实例在 promise 解决或拒绝之前仍然存在。）
 		if (this.abort) {
-			throw new Error("Cline 实例已中止")
+			throw new Error("天熠小码实例已中止")
 		}
 		let askTs: number
 		if (partial !== undefined) {
@@ -798,7 +798,7 @@ export class Cline {
 	async sayAndCreateMissingParamError(toolName: ToolUseName, paramName: string, relPath?: string) {
 		await this.say(
 			"error",
-			`Cline 尝试使用 ${toolName}${
+			`天熠小码尝试使用 ${toolName}${
 				relPath ? ` 处理 '${relPath.toPosix()}'` : ""
 			}，但缺少必需参数 '${paramName}' 的值。正在重试...`,
 		)
@@ -1885,7 +1885,7 @@ export class Cline {
 								} else {
 									// 如果启用了自动批准，但此工具未被自动批准，则发送通知
 									showNotificationForApprovalIfAutoApprovalEnabled(
-										`Cline 想要 ${fileExists ? "编辑" : "创建"} ${path.basename(relPath)}`,
+										`天熠小码想要 ${fileExists ? "编辑" : "创建"} ${path.basename(relPath)}`,
 									)
 									this.removeLastPartialMessageIfExistsWithType("say", "tool")
 
@@ -2027,7 +2027,7 @@ export class Cline {
 									telemetryService.captureToolUsage(this.taskId, block.name, true, true)
 								} else {
 									showNotificationForApprovalIfAutoApprovalEnabled(
-										`Cline 想要读取 ${path.basename(absolutePath)}`,
+										`天熠小码想要读取 ${path.basename(absolutePath)}`,
 									)
 									this.removeLastPartialMessageIfExistsWithType("say", "tool")
 									const didApprove = await askApproval("tool", completeMessage)
@@ -2101,7 +2101,7 @@ export class Cline {
 									telemetryService.captureToolUsage(this.taskId, block.name, true, true)
 								} else {
 									showNotificationForApprovalIfAutoApprovalEnabled(
-										`Cline 想要查看目录 ${path.basename(absolutePath)}/`,
+										`天熠小码想要查看目录 ${path.basename(absolutePath)}/`,
 									)
 									this.removeLastPartialMessageIfExistsWithType("say", "tool")
 									const didApprove = await askApproval("tool", completeMessage)
@@ -2168,7 +2168,7 @@ export class Cline {
 									telemetryService.captureToolUsage(this.taskId, block.name, true, true)
 								} else {
 									showNotificationForApprovalIfAutoApprovalEnabled(
-										`Cline 想要查看 ${path.basename(absolutePath)}/ 中的源代码定义`,
+										`天熠小码想要查看 ${path.basename(absolutePath)}/ 中的源代码定义`,
 									)
 									this.removeLastPartialMessageIfExistsWithType("say", "tool")
 									const didApprove = await askApproval("tool", completeMessage)
@@ -2247,7 +2247,7 @@ export class Cline {
 									telemetryService.captureToolUsage(this.taskId, block.name, true, true)
 								} else {
 									showNotificationForApprovalIfAutoApprovalEnabled(
-										`Cline 想要在 ${path.basename(absolutePath)}/ 中搜索文件`,
+										`天熠小码想要在 ${path.basename(absolutePath)}/ 中搜索文件`,
 									)
 									this.removeLastPartialMessageIfExistsWithType("say", "tool")
 									const didApprove = await askApproval("tool", completeMessage)
@@ -2333,7 +2333,7 @@ export class Cline {
 										this.consecutiveAutoApprovedRequestsCount++
 									} else {
 										showNotificationForApprovalIfAutoApprovalEnabled(
-											`Cline 想要使用浏览器并启动 ${url}`,
+											`天熠小码想要使用浏览器并启动 ${url}`,
 										)
 										this.removeLastPartialMessageIfExistsWithType("say", "browser_action_launch")
 										const didApprove = await askApproval("browser_action_launch", url)
@@ -2491,7 +2491,7 @@ export class Cline {
 									didAutoApprove = true
 								} else {
 									showNotificationForApprovalIfAutoApprovalEnabled(
-										`Cline 想要执行命令： ${command}`,
+										`天熠小码想要执行命令： ${command}`,
 									)
 									// this.removeLastPartialMessageIfExistsWithType("say", "command")
 									const didApprove = await askApproval(
@@ -2588,7 +2588,7 @@ export class Cline {
 										this.consecutiveMistakeCount++
 										await this.say(
 											"error",
-											`Cline 尝试使用 ${tool_name}，但 JSON 参数无效。正在重试...`,
+											`天熠小码尝试使用 ${tool_name}，但 JSON 参数无效。正在重试...`,
 										)
 										pushToolResult(
 											formatResponse.toolError(
@@ -2618,7 +2618,7 @@ export class Cline {
 									this.consecutiveAutoApprovedRequestsCount++
 								} else {
 									showNotificationForApprovalIfAutoApprovalEnabled(
-										`Cline 想要在 ${server_name} 上使用 ${tool_name}`,
+										`天熠小码想要在 ${server_name} 上使用 ${tool_name}`,
 									)
 									this.removeLastPartialMessageIfExistsWithType("say", "use_mcp_server")
 									const didApprove = await askApproval("use_mcp_server", completeMessage)
@@ -2708,7 +2708,7 @@ export class Cline {
 									this.consecutiveAutoApprovedRequestsCount++
 								} else {
 									showNotificationForApprovalIfAutoApprovalEnabled(
-										`Cline 想要访问 ${server_name} 上的 ${uri}`,
+										`天熠小码想要访问 ${server_name} 上的 ${uri}`,
 									)
 									this.removeLastPartialMessageIfExistsWithType("say", "use_mcp_server")
 									const didApprove = await askApproval("use_mcp_server", completeMessage)
@@ -2763,7 +2763,7 @@ export class Cline {
 
 								if (this.autoApprovalSettings.enabled && this.autoApprovalSettings.enableNotifications) {
 									showSystemNotification({
-										subtitle: "Cline 有一个问题...",
+										subtitle: "天熠小码有一个问题...",
 										message: question.replace(/\n/g, " "),
 									})
 								}
@@ -3084,14 +3084,14 @@ export class Cline {
 			if (this.autoApprovalSettings.enabled && this.autoApprovalSettings.enableNotifications) {
 				showSystemNotification({
 					subtitle: "错误",
-					message: "Cline 遇到问题。您想继续任务吗？",
+					message: "天熠小码遇到问题。您想继续任务吗？",
 				})
 			}
 			const { response, text, images } = await this.ask(
 				"mistake_limit_reached",
 				this.api.getModel().id.includes("claude")
 					? `这可能表明其思维过程出现故障或无法正确使用工具，可以通过用户指导来缓解（例如"尝试将任务分解为更小的步骤"）。`
-					: "Cline 使用复杂的提示和迭代任务执行，这对能力较弱的模型可能具有挑战性。为获得最佳结果，建议使用 Claude 3.7 Sonnet，它具有先进的代理编码能力。",
+					: "天熠小码使用复杂的提示和迭代任务执行，这对能力较弱的模型可能具有挑战性。为获得最佳结果，建议使用 Claude 3.7 Sonnet，它具有先进的代理编码能力。",
 			)
 			if (response === "messageResponse") {
 				userContent.push(
@@ -3114,12 +3114,12 @@ export class Cline {
 			if (this.autoApprovalSettings.enableNotifications) {
 				showSystemNotification({
 					subtitle: "已达到最大请求数",
-					message: `Cline 已自动批准 ${this.autoApprovalSettings.maxRequests.toString()} 个 API 请求。`,
+					message: `天熠小码已自动批准 ${this.autoApprovalSettings.maxRequests.toString()} 个 API 请求。`,
 				})
 			}
 			await this.ask(
 				"auto_approval_max_req_reached",
-				`Cline 已自动批准 ${this.autoApprovalSettings.maxRequests.toString()} 个 API 请求。您想重置计数并继续任务吗？`,
+				`天熠小码已自动批准 ${this.autoApprovalSettings.maxRequests.toString()} 个 API 请求。您想重置计数并继续任务吗？`,
 			)
 			// 如果我们通过了这个 promise，意味着用户批准了并且没有开始新任务
 			this.consecutiveAutoApprovedRequestsCount = 0

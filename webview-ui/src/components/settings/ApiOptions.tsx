@@ -967,7 +967,7 @@ const ApiOptions = ({ showModelOptions, apiErrorMessage, modelIdErrorMessage, is
 							color: "var(--vscode-descriptionForeground)",
 						}}>
 						<span style={{ color: "var(--vscode-errorForeground)" }}>
-							(<span style={{ fontWeight: 500 }}>注意：</span> Cline 使用复杂的提示，并且在 Claude 模型上效果最佳。能力较弱的模型可能无法按预期工作。)
+							(<span style={{ fontWeight: 500 }}>注意：</span> 天熠小码使用复杂的提示，并且在 Claude 模型上效果最佳。能力较弱的模型可能无法按预期工作。)
 						</span>
 					</p>
 				</div>
@@ -997,7 +997,7 @@ const ApiOptions = ({ showModelOptions, apiErrorMessage, modelIdErrorMessage, is
 							color: "var(--vscode-descriptionForeground)",
 						}}>
 						<span style={{ color: "var(--vscode-errorForeground)" }}>
-							(<span style={{ fontWeight: 500 }}>注意：</span> Cline 使用复杂的提示，并且在 Claude 模型上效果最佳。能力较弱的模型可能无法按预期工作。)
+							(<span style={{ fontWeight: 500 }}>注意：</span> 天熠小码使用复杂的提示，并且在 Claude 模型上效果最佳。能力较弱的模型可能无法按预期工作。)
 						</span>
 					</p>
 				</div>
@@ -1027,7 +1027,7 @@ const ApiOptions = ({ showModelOptions, apiErrorMessage, modelIdErrorMessage, is
 							color: "var(--vscode-descriptionForeground)",
 						}}>
 						<span style={{ color: "var(--vscode-errorForeground)" }}>
-							(<span style={{ fontWeight: 500 }}>注意：</span> Cline 使用复杂的提示，并且在 Claude 模型上效果最佳。能力较弱的模型可能无法按预期工作。)
+							(<span style={{ fontWeight: 500 }}>注意：</span> 天熠小码使用复杂的提示，并且在 Claude 模型上效果最佳。能力较弱的模型可能无法按预期工作。)
 						</span>
 					</p>
 				</div>
@@ -1076,7 +1076,7 @@ const ApiOptions = ({ showModelOptions, apiErrorMessage, modelIdErrorMessage, is
 									marginTop: "5px",
 									color: "var(--vscode-descriptionForeground)",
 								}}>
-								VS Code 语言模型 API 允许您运行其他 VS Code 扩展提供的模型（包括但不限于 GitHub Copilot）。开始的最简单方法是从 VS 市场安装 Copilot 扩展并启用 Claude 3.7 Sonnet。
+								VS Code 语言模型 API 允许您运行其他 VS Code 扩展提供的模型（包括但不限于 GitHub Copilot）。
 							</p>
 						)}
 
@@ -1151,7 +1151,7 @@ const ApiOptions = ({ showModelOptions, apiErrorMessage, modelIdErrorMessage, is
 						</VSCodeLink>{" "}
 						功能以便与此扩展一起使用。{" "}
 						<span style={{ color: "var(--vscode-errorForeground)" }}>
-							（<span style={{ fontWeight: 500 }}>注意：</span> Cline 使用复杂的提示，并且在 Claude 模型上效果最佳。能力较弱的模型可能无法按预期工作。）
+							（<span style={{ fontWeight: 500 }}>注意：</span> 天熠小码使用复杂的提示，并且在 Claude 模型上效果最佳。能力较弱的模型可能无法按预期工作。）
 						</span>
 					</p>
 				</div>
@@ -1257,7 +1257,7 @@ const ApiOptions = ({ showModelOptions, apiErrorMessage, modelIdErrorMessage, is
 							快速入门指南。
 						</VSCodeLink>
 						<span style={{ color: "var(--vscode-errorForeground)" }}>
-							（<span style={{ fontWeight: 500 }}>注意：</span> Cline 使用复杂的提示，并且在 Claude 模型上效果最佳。能力较弱的模型可能无法按预期工作。）
+							（<span style={{ fontWeight: 500 }}>注意：</span> 天熠小码使用复杂的提示，并且在 Claude 模型上效果最佳。能力较弱的模型可能无法按预期工作。）
 						</span>
 					</p>
 				</div>

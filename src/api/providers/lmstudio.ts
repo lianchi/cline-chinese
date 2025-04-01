@@ -41,9 +41,7 @@ export class LmStudioHandler implements ApiHandler {
 			}
 		} catch (error) {
 			// LM Studio doesn't return an error code/body for now
-			throw new Error(
-				"Please check the LM Studio developer logs to debug what went wrong. You may need to load the model with a larger context length to work with Cline's prompts.",
-			)
+			throw new Error("请检查 LM Studio 开发者日志以调试问题。您可能需要加载具有更大上下文长度的模型以使用天熠小码的提示。")
 		}
 	}
 

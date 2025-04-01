@@ -216,7 +216,7 @@ const AutoApproveMenu = ({ style }: AutoApproveMenuProps) => {
 							color: getAsVar(VSC_DESCRIPTION_FOREGROUND),
 							fontSize: "12px",
 						}}>
-						自动批准允许 Cline 在不征求许可的情况下执行以下操作。请谨慎使用，并仅在了解风险的情况下启用。
+						自动批准允许天熠小码在不征求许可的情况下执行以下操作。请谨慎使用，并仅在了解风险的情况下启用。
 					</div>
 					{ACTION_METADATA.map((action) => (
 						<div key={action.id} style={{ margin: "6px 0" }}>
@@ -283,7 +283,7 @@ const AutoApproveMenu = ({ style }: AutoApproveMenuProps) => {
 							fontSize: "12px",
 							marginBottom: "10px",
 						}}>
-						Cline 将自动发出这么多次 API 请求，然后才请求批准以继续执行任务。
+						天熠小码将自动发出这么多次 API 请求，然后才请求批准以继续执行任务。
 					</div>
 					<div style={{ margin: "6px 0" }}>
 						<VSCodeCheckbox
@@ -300,7 +300,7 @@ const AutoApproveMenu = ({ style }: AutoApproveMenuProps) => {
 								color: getAsVar(VSC_DESCRIPTION_FOREGROUND),
 								fontSize: "12px",
 							}}>
-							当 Cline 需要批准才能继续或任务完成时接收系统通知。
+							当天熠小码需要批准才能继续或任务完成时接收系统通知。
 						</div>
 					</div>
 				</div>
