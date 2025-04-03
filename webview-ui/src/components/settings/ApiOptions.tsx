@@ -209,6 +209,7 @@ const ApiOptions = ({ showModelOptions, apiErrorMessage, modelIdErrorMessage, is
 					<VSCodeOption value="lmstudio">LM Studio</VSCodeOption>
 					<VSCodeOption value="ollama">Ollama</VSCodeOption>
 					<VSCodeOption value="litellm">LiteLLM</VSCodeOption>
+					<VSCodeOption value="dify">Dify</VSCodeOption>
 					<VSCodeOption value="asksage">AskSage</VSCodeOption>
 					<VSCodeOption value="xai">X AI</VSCodeOption>
 					<VSCodeOption value="sambanova">SambaNova</VSCodeOption>
@@ -635,11 +636,13 @@ const ApiOptions = ({ showModelOptions, apiErrorMessage, modelIdErrorMessage, is
 						}}>
 						{apiConfiguration?.awsUseProfile ? (
 							<>
-								使用来自 ~/.aws/credentials 的 AWS 配置文件凭证。将配置文件名称留空以使用默认配置文件。这些凭证仅用于本地从此扩展发出 API 请求。
+								使用来自 ~/.aws/credentials 的 AWS
+								配置文件凭证。将配置文件名称留空以使用默认配置文件。这些凭证仅用于本地从此扩展发出 API 请求。
 							</>
 						) : (
 							<>
-								通过提供上述密钥或使用默认的 AWS 凭证提供程序进行身份验证，即 ~/.aws/credentials 或环境变量。这些凭证仅用于本地从此扩展发出 API 请求。
+								通过提供上述密钥或使用默认的 AWS 凭证提供程序进行身份验证，即 ~/.aws/credentials
+								或环境变量。这些凭证仅用于本地从此扩展发出 API 请求。
 							</>
 						)}
 					</p>
@@ -1263,6 +1266,48 @@ const ApiOptions = ({ showModelOptions, apiErrorMessage, modelIdErrorMessage, is
 				</div>
 			)}
 
+			{selectedProvider === "dify" && (
+				<div>
+					<VSCodeTextField
+						value={apiConfiguration?.difyApiKey || ""}
+						style={{ width: "100%" }}
+						type="password"
+						onInput={handleInputChange("difyApiKey")}
+						placeholder="输入 API 密钥...">
+						<span style={{ fontWeight: 500 }}>Dify API 密钥</span>
+					</VSCodeTextField>
+
+					<VSCodeTextField
+						value={apiConfiguration?.difyBaseUrl || ""}
+						style={{ width: "100%", marginTop: 3 }}
+						type="url"
+						onInput={handleInputChange("difyBaseUrl")}
+						placeholder="输入 Dify 基础 URL...">
+						<span style={{ fontWeight: 500 }}>Dify 基础 URL</span>
+					</VSCodeTextField>
+
+					<p
+						style={{
+							fontSize: "12px",
+							marginTop: 3,
+							color: "var(--vscode-descriptionForeground)",
+						}}>
+						API 密钥和基础 URL 存储在本地，仅用于从此扩展发出 API 请求。
+					</p>
+				</div>
+			)}
+
+			{apiErrorMessage && (
+				<p
+					style={{
+						margin: "-10px 0 4px 0",
+						fontSize: 12,
+						color: "var(--vscode-errorForeground)",
+					}}>
+					{apiErrorMessage}
+				</p>
+			)}
+
 			{selectedProvider === "xai" && (
 				<div>
 					<VSCodeTextField
@@ -1461,7 +1506,7 @@ const ApiOptions = ({ showModelOptions, apiErrorMessage, modelIdErrorMessage, is
 }
 
 export function getOpenRouterAuthUrl(uriScheme?: string) {
-	return `https://openrouter.ai/auth?callback_url=${uriScheme || "vscode"}://saoudrizwan.claude-dev/openrouter`
+	return `https://openrouter.ai/auth?callback_url=${uriScheme || "vscode"}://hybridtalentcomputing.cline-chinese/openrouter`
 }
 
 export const formatPrice = (price: number) => {
@@ -1536,8 +1581,7 @@ export const ModelInfoView = ({
 		),
 		modelInfo.supportsPromptCache && modelInfo.cacheReadsPrice && (
 			<span key="cacheReadsPrice">
-				<span style={{ fontWeight: 500 }}>缓存读取价格：</span> {formatPrice(modelInfo.cacheReadsPrice || 0)}/百万
-				令牌
+				<span style={{ fontWeight: 500 }}>缓存读取价格：</span> {formatPrice(modelInfo.cacheReadsPrice || 0)}/百万 令牌
 			</span>
 		),
 		modelInfo.outputPrice !== undefined && modelInfo.outputPrice > 0 && (
@@ -1692,6 +1736,12 @@ export function normalizeApiConfiguration(apiConfiguration?: ApiConfiguration): 
 			return {
 				selectedProvider: provider,
 				selectedModelId: apiConfiguration?.liteLlmModelId || "",
+				selectedModelInfo: openAiModelInfoSaneDefaults,
+			}
+		case "dify":
+			return {
+				selectedProvider: provider,
+				selectedModelId: "",
 				selectedModelInfo: openAiModelInfoSaneDefaults,
 			}
 		case "xai":

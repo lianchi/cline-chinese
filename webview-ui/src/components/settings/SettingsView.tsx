@@ -215,7 +215,7 @@ const SettingsView = ({ onDone }: SettingsViewProps) => {
 						style={{ width: "100%" }}
 						resize="vertical"
 						rows={4}
-						placeholder={'例如：“在末尾运行单元测试”，“使用 TypeScript 和 async/await”，“用西班牙语交流”'}
+						placeholder={"例如：“在末尾运行单元测试”，“使用 TypeScript 和 async/await”，“用西班牙语交流”"}
 						onInput={(e: any) => setCustomInstructions(e.target?.value ?? "")}>
 						<span style={{ fontWeight: "500" }}>自定义指令</span>
 					</VSCodeTextArea>
